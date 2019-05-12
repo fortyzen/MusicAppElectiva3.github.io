@@ -18,6 +18,42 @@
                 <input class="inputBox" placeholder="Escribe aqui tu musica" id="input" type="text">
                 <button class="busquedaBtn" type="submit">Buscar</button>
             </form>
+            <br>
+            <div id="descripcion"></div>
+            <img id="artwork">
+        </section>
+
+        <section>
+            <p>Volume: </p>
+            <input class="volumeEstilo" id="vol-control" type="range" min="0" max="100" step="1"
+            oninput="SetVolume(this.value)" onchange="SetVolume(this.value)">
+        </section>
+        <br>
+
+        <section class="wrapperButton">
+            <p>Controles: </p>
+            <button id="playBtn" type="button" class="button">
+                PLAY
+            </button>
+
+            <button id="pauseBtn" type="button" class="button">
+                PAUSE
+            </button>
+            
+            <button id="stopBtn" type="button" class="button">
+                STOP
+            </button>
+
+            <button id="fowardBtn" type="button" class="button">
+                NEXT
+            </button>
+
+            <button id="rewindBtn" type="button" class="button">
+                PREVIOUS
+            </button>
+
+            <script src="https://connect.soundcloud.com/sdk/sdk-3.3.2.js"></script>
+            <script src="musicapp.js"></script>
         </section>
     </body>
 </html>
