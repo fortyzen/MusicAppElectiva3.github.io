@@ -48,9 +48,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
         document.querySelector("form").addEventListener("submit", (event) => {
             event.preventDefault() //inve
             console.log(event);
-            SC.get("/tracks", {
-                q: document.getElementById("input").value
-            }).then((response) => {
+            SC.get('/tracks', {
+                q: document.getElementById("#search_music").value
+            }).then( function(response){
                 console.log(response);
                 tracks = response;
                 document.getElementById("description").innerHTML = tracks[currentSong].title + tracks[currentSong].genre + tracks[currentSong].permalink + tracks[currentSong].description
@@ -60,9 +60,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
         });
     });
 });
-var currentSong =0;
+var currentSong = 0;
 function playTrack(songID) {
-    document.getElementById("description").innerHTML = tracks[currentSong].title + " . " +"Genre:" + tracks[currentSong].genre +" . " + "Permalink:" + tracks[currentSong].permalink + " . "+ "Description:" + tracks[currentSong].description
+    document.getElementById("description").innerHTML = tracks[currentSong].title + " . " +"Genero:" + tracks[currentSong].genre +" . " + "Permalink:" + tracks[currentSong].permalink + " . "+ "Description:" + tracks[currentSong].description;
     if (!players[songID]) {
         SC.stream('/tracks/' + tracks[songID].id).then((player) => {
             console.log(player);
