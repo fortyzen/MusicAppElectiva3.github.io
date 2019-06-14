@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Reproductor</title>
+    <link rel=StyleSheet href="styles.css" type="text/css" media=screen>
+</head>
+
+<body>
+    
+    <h3 class="titulos">
+        Reproductor de musica - Trabajo Práctico de Arquitectura Web - Electiva III 
+    </h3>
+    <h4>
+        Aquí puede encontrar algunas musicas. Haga clic en uno de ellos para reproducirlos o ingrese en el buscador
+    </h4>
+    <form>
+        <p>Informacion del track</p>
+        <input class="inputBox" placeholder="Escribe aqui tu musica" id="search_music" type="text">
+        <button class="searchBtn" type="submit">Search</button>
+    </form>
+
+    <p class="listas"> 
+        Seleccione el estilo de musica que desea escuchar
+        <ul>
+            <li><a href="#" onclick="return theFunction(this);">Rock</a></li>
+            <li><a href="#" onclick="return theFunction(this);">Electronic</a></li>
+            <li><a href="#" onclick="return theFunction(this);">Techno</a></li>
+        </ul>
+    </p>
+
+    <p class="listas"> 
+        Seleccione el grupo de musica que desea escuchar
+        <ul>
+            <li><a href="#" onclick="return theFunction(this);">System of a down</a></li>
+            <li><a href="#" onclick="return theFunction(this);">Metallica</a></li>
+            <li><a href="#" onclick="return theFunction(this);">Adele</a></li>
+        </ul>
+    </p>
+
+    <p class="listas"> 
+        Seleccione el solista que desea escuchar
+        <ul>
+            <li><a href="#" onclick="return theFunction(this);">Chayanne</a></li>
+            <li><a href="#" onclick="return theFunction(this);">Shakira</a></li>
+            <li><a href="#" onclick="return theFunction(this);">Don Omar</a></li>
+        </ul>
+    </p>
+    
+    <button onclick="prevStop()">Stop</button>
+    <button onclick="prevPause()">Pausa</button>
+    <button onclick="prevReplay()">Play</button>
+    <button onclick="next()">Next</button>
+    
+    
+    <div id="target"></div>
+    <script src="https://connect.soundcloud.com/sdk/sdk-3.3.2.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
+    <script src="sound.js"></script>
+</body>
+
+</html>
